@@ -15,11 +15,19 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
 
-app.use(router)
+// app.get("/.netlify/functions/app", (req, res, next) => {
+//   res.json({
+//     message: "america ya :D"
+//   })
+// })
+
+app.use("/.netlify/functions/app",router)
+
+const handler = ServerlessHttp(app)
 
 module.exports.handler = async (event, context) => {
   const result = await handler(event, context);
   return result
 }
 
-module.exports = app
+// module.exports = app
