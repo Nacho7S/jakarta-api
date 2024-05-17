@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch bin/www.js"
+    "start": "node --watch src/bin/www.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,9 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.3",
-    "rate-limiter-flexible": "^5.0.3"
+    "netlify-cli": "^17.23.5",
+    "netlify-lambda": "^2.0.16",
+    "rate-limiter-flexible": "^5.0.3",
+    "serverless-http": "^3.2.0"
   }
 }
