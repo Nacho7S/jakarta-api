@@ -5,7 +5,7 @@ const UsersModel = require("../models/users");
 const authentication = async (req, res, next) => {
   try {
     const { access_token } = req.headers
-    // console.log(access_token);
+    console.log(access_token, "access token coy");
 
     if (!access_token) {
       throw { name: "Unauthenticated"}
@@ -26,7 +26,7 @@ const authentication = async (req, res, next) => {
     req.user = {
       _id: findUser._id,
       name: findUser.fullName,
-      email: findUser.userName,
+      email: findUser.email,
       roles: findUser.roles
     }
 
